@@ -14,8 +14,8 @@ canvas.grid(row=0,column=0)
 coords = {"x":0,"y":0,"x2":0,"y2":0}
 # keep a reference to all lines by keeping them in a list 
 lines = []
-xDiv = 10
-yDiv = 10
+xDiv = 20
+yDiv = 20
 def create_grid(xDiv:int = 5,yDiv:int = 5):
     for i in range(xDiv):
         canvas.create_line(CANV_WIDTH//xDiv*i,0,CANV_WIDTH//xDiv*i, CANV_HEIGHT)
@@ -39,7 +39,7 @@ def click(e):
 
     
     canvas.create_rectangle(tamDivX*(e.x//tamDivX), tamDivY*(e.y//tamDivY), 
-                            tamDivX*ceil(e.x/tamDivX), tamDivY*ceil(e.y/tamDivY), width=5,
+                            tamDivX*ceil(e.x/tamDivX), tamDivY*ceil(e.y/tamDivY), width=1,
                             fill=colorWheel.getColor())
     # create a line on this point and store it in the list
     # lines.append(canvas.create_line(coords["x"],coords["y"],coords["x"],coords["y"]))
